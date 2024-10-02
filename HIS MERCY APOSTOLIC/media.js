@@ -82,3 +82,16 @@ function closeDropdown() {
 if (aboutLink) aboutLink.addEventListener('click', toggleDropdown);
 if (dropdownIcon) dropdownIcon.addEventListener('click', toggleDropdown);
 if (closeButton) closeButton.addEventListener('click', closeDropdown);
+
+
+ document.addEventListener("DOMContentLoaded", function() {
+    // Select all image, iframe, video, and embed elements
+    const lazyElements = document.querySelectorAll('img, iframe, video, embed');
+    
+    // Add loading="lazy" attribute to each element
+    lazyElements.forEach(element => {
+      if (!element.hasAttribute('loading')) {
+        element.setAttribute('loading', 'lazy');
+      }
+    });
+  });
