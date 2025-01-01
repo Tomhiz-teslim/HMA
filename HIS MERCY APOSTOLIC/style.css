@@ -1749,7 +1749,7 @@ footer .footer-bottom p a:hover {
     }
     article .centerContainer{
         width: 100%;
-        height: 300px;
+        height: 35em;
         background-color: #F2F3F4;
         border-top-left-radius: 40px;
         border-top-right-radius: 40px;
@@ -1774,10 +1774,11 @@ footer .footer-bottom p a:hover {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        flex-wrap: wrap;
     }
     article .centerContainer  .Next .imgcard{
-        width: 23%;
-        height: 150px;
+        width: 35%;
+        height: 200px;
     }
     
     article .centerContainer  .Next .imgcard:hover{
@@ -1798,9 +1799,9 @@ footer .footer-bottom p a:hover {
     }
     article .centerContainer  .Next .imgcard .T{
         position: relative;
-        bottom: 150px;
+        bottom: 200px;
         width: 100%;
-        height: 150px;
+        height: 200px;
         background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
         display: flex;
         flex-direction: row;
@@ -1814,6 +1815,7 @@ footer .footer-bottom p a:hover {
         text-decoration: none;
         font-size: 12px;
         text-align: center;
+        width: 80%;
     }
     article .centerContainer .Next .imgcard .T a:hover{
         color: #fff;
@@ -1821,8 +1823,8 @@ footer .footer-bottom p a:hover {
     } 
     
         article .thirdCont{
-            position: relative;
-            bottom: 10px;
+            /* position: relative;
+            bottom: 10px; */
             width: 90%;
             margin-left: 5%;
             height: 240px;
@@ -1832,6 +1834,7 @@ footer .footer-bottom p a:hover {
             border-bottom-right-radius: 40px;
             background-color: #132d46;
             padding-top: 40px;
+            margin-top: 50px;
         }
         article .thirdCont .purpose{
             width: 50%;
