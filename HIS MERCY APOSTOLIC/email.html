@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Box</title>
+    <link rel="stylesheet" href="./email.css">
+    <link rel="shortcut icon" href="./Assets/trans.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e907537899.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif; /* Use Roboto Condensed font */
+        }
+    </style>
+</head>
+<body>
+    <header class="header" id="head">
+        <div class="logo">
+            <a href="./index.html"><img src="./Assets/trans.png" alt="Logo"></a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navBar" >
+            <ul class="navbar">
+                <!-- Close button for mobile view -->
+                <i class="fas fa-times" id="close"></i>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./history.html">ABOUT US</a></li>
+                <li><a href="./ministeries.html" class="B">MINISTRIES</a></li>
+                <li><a href="./media.html" class="B">MEDIA RESOURCES</a></li>
+                <li><a href="./program.html" class="B">PROGRAMS</a></li>
+                <li><a href="./contact.html" class="B">CONTACT US</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Hamburger menu for mobile view -->
+        <div class="menu">
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+
+    </header>
+
+    <div class="chat-box">
+        <h2>Send Us a Message</h2>
+        <form id="chatForm" action="mailto:hismercyapostolicch@gmail.com" method="post" enctype="text/plain">
+            <label for="userName">Name:</label>
+            <input type="text" id="userName" name="userName" required>
+            
+            <label for="userMessage">Message:</label>
+            <textarea id="userMessage" name="userMessage" rows="5" required></textarea>
+            
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+    <script src="./email.js"></script>
+</body>
+</html>

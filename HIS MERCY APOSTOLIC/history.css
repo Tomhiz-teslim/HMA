@@ -1,0 +1,924 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 0em;
+}
+:root{
+    --Black: #191e29;
+    --myBlue: #132d46;
+    --theBlue: #023e8a;
+    --beauty: #0096c7;
+    --light-green: #01c38d;
+    --myGrey: #696e79;
+    --white: #fff;
+    --myGrey: rgb(196, 189, 189);
+    --theorange: rgb(199, 180, 76);
+  }
+
+ .backImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    z-index: -8; /* Places the video behind the content */
+}
+ .backImg img{
+    width: 100%;
+ }
+ /* General Header Styles */
+ header{
+  width: 100%;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  position: fixed; 
+  top: 0;
+  z-index: 100; 
+}
+
+.header.head-active{
+  background-color: #132d46;
+  height: 120px;
+  position: fixed;
+  top: 0;
+}
+.header.head-active nav ul li a:hover {
+  color: #fff;
+}
+header .logo {
+  width: 80px;
+  height: 100px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+header .logo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+header .nav{
+  width: 80%;
+  margin-left: 10%;
+}
+
+header .navbar{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 0;
+  padding: 0;
+}
+header #close{
+  display: none;
+}
+
+header .navbar li{
+  display: flex;  
+  list-style: none;
+}
+header .navbar li a{
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  padding: 7px;
+  border-radius: 10px;
+  width: 100%;
+  font-weight: 600;
+}
+.header.head-active .navbar li a{
+  color: #fff;
+}
+header nav ul li a.active {
+  background-color: #01c38d;
+}
+header nav ul li a.active:hover{
+  padding: 7px;
+  border-bottom: none;
+    color: #fff;
+}
+header .menu, #menu-btn {
+  display: none; 
+}
+
+header nav ul li a:hover {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+header .menu{
+  display: none;
+}
+
+.heroTexts{
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #01c38d;
+  font-size: 2em;
+  margin-top: 0px;
+  background-color: rgba(0, 0, 0, 0.4); /* Dark overlay */
+
+}
+.heroTexts h1{
+  width: 90%;
+  text-align: center;
+}
+
+#aboutNav{
+  display: none;
+}
+  
+
+  
+article{
+    height: 100%;
+    margin-top: 50px ;
+}
+article .texts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+article .texts .story{
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 80%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+article .texts .story h2{
+  font-size: 2em;
+  text-align: center;
+}
+article .texts .story p{
+  font-size: 20px;
+
+}
+article .texts .story .numb{
+  font-size: 1.5em;
+  padding: 20px;
+}
+
+article .texts .beliefs{
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 85%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+article .texts .beliefs ul{
+  padding: 20px;
+}
+
+article .texts .beliefs h2{
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+article .texts .beliefs h6{
+  font-size: 1em;
+  width: 50%;
+  opacity: 0.9;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.fixed-icons {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  right: 20px; /* Distance from the right side of the screen */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Space between icons */
+  z-index: 1000; /* Ensure icons are on top of other elements */
+}
+
+.fixed-icons .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333; /* Dark background for visibility */
+  color: #fff; /* White icon color */
+  text-decoration: none;
+  font-size: 24px; /* Icon size */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+.fixed-icons .icon:hover {
+  background-color: #555; /* Change background color on hover */
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Specific styles for each icon */
+.fixed-icons .email {
+  background-color: #007bff; /* Blue color for email */
+}
+
+.fixed-icons .whatsapp {
+  background-color: #25D366; /* Green color for WhatsApp */
+}
+
+
+footer{
+    width: 100%;
+    height: 70px;
+    margin-top: 200px;
+    background-color:#191e29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h3{
+    color: #0096c7;
+    font-size: 1em;
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+  }
+  
+  body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow-x: hidden;
+      padding-top: 0em;
+      background-color: #fff;
+  }
+  :root{
+      --Black: #191e29;
+      --myBlue: #132d46;
+      --theBlue: #023e8a;
+      --beauty: #0096c7;
+      --light-green: #01c38d;
+      --myGrey: #696e79;
+      --white: #fff;
+      --myGrey: rgb(196, 189, 189);
+      --theorange: rgb(199, 180, 76);
+    }
+  
+    .backImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70vh;
+      overflow: hidden;
+      z-index: -8; /* Places the video behind the content */
+  }
+   .backImg img{
+      width: 100%;
+   }
+   header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+    position: fixed; 
+    top: 0;
+    z-index: 100;
+}
+.header.head-active{
+background-color: #132d46;
+height: 5.9em;
+position: fixed;
+top: 0;
+}
+header.head-active .menu #menu-btn{
+    color: #fff;
+}
+
+header .logo {
+    width: 4em;
+    height: 5em;
+    margin-top: 0.5em;
+    margin-left: 2rem;
+    
+}
+header .logo img{
+
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+
+header .nav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: beige;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+header .navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+header #close{
+    display: flex;
+    font-size: 24px;
+    margin-left: 22em;
+    margin-top: 30px;
+    cursor: pointer;
+}
+header .navbar li{
+    display: flex;  
+    list-style: none;
+    border: 1px solid rgb(214, 214, 214) ;
+    width: 99%;
+}
+header .navbar li a{
+    text-decoration: none;
+    color: #132d46;
+    font-weight: 400;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+}
+header nav ul li a.active {
+    background-color: transparent;
+    color: #01c38d;
+}
+header nav ul li a.active:hover{
+    padding: 5px;
+    border-bottom:  transparent;
+    display: flex;
+}
+
+header nav ul li a:hover {
+    color: #132d46;
+    border-bottom: 0px solid #fff;
+}
+.header.head-active .navbar li a{
+    color: #000;
+}
+.header.head-active nav ul li a.active{
+    color: #01c38d;
+}
+.dropdown{
+    display: flex;
+    gap: 0px;
+    width: 100%;
+}
+
+#about{
+    width: 240px;
+}
+
+#dropdownIcon{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    margin-top: 5px;
+    cursor: pointer;
+    width: 100px;
+}
+
+.dropdown-content {
+    flex-direction: column;
+    position: absolute;
+    right: 0px;
+    top: 12em;
+    left: 0px;
+    width: 200px;
+    height: 270px;
+    background-color: beige;
+    color: #fff; 
+    font-weight: 300;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 101;
+    gap: 40px;
+    padding-top: 10px;
+}
+#navdrop {
+    display: none;
+}
+
+#navdrop.show {
+    display: flex;
+} 
+#cl {
+    display: flex; 
+    font-size: 18px;
+    cursor: pointer;
+} 
+
+
+header .menu {
+    display: flex; 
+    justify-content: flex-end;
+    width: 80px;
+    height: 30px;
+    margin-left: 29em;
+    margin-top: 30px;
+}
+header .menu #menu-btn {
+    display: flex;
+    cursor: pointer;
+    font-size: 24px;
+    color: #fff;
+}
+    
+    .heroTexts{
+        width: 100%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #01c38d;
+        font-size: 1em;
+        text-align: center;
+        margin-top: 0px;
+        margin-left: 0;
+    }
+    
+  article{
+      height: 100%;
+      margin-top: 80px ;
+  }
+  article .texts{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+  }
+  
+  article .texts .story{
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 80%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px;
+  }
+  article .texts .story h2{
+    font-size: 1.5em;
+    text-align: center;
+  }
+  article .texts .story p{
+    font-size: 15px;
+  
+  }
+  article .texts .story .numb{
+    font-size: 1em;
+    padding: 15px;
+  }
+  
+  article .texts .beliefs{
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    width: 90%;
+    height: 100%;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  article .texts .beliefs ul{
+    padding: 15px;
+  }
+  
+  article .texts .beliefs h2{
+    font-size: 1em;
+  }
+  article .texts .beliefs h6{
+    font-size: 0.8em;
+    width: 50%;
+    opacity: 0.9;
+    margin-left: 20px;
+  }
+  
+  .fixed-icons {
+    position: fixed;
+    bottom: 20px; /* Distance from the bottom of the screen */
+    right: 20px; /* Distance from the right side of the screen */
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between icons */
+    z-index: 1000; /* Ensure icons are on top of other elements */
+  }
+  
+  .fixed-icons .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #333; /* Dark background for visibility */
+    color: #fff; /* White icon color */
+    text-decoration: none;
+    font-size: 24px; /* Icon size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+  }
+  
+  .fixed-icons .icon:hover {
+    background-color: #555; /* Change background color on hover */
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+  }
+  
+  /* Specific styles for each icon */
+  .fixed-icons .email {
+    background-color: #007bff; /* Blue color for email */
+  }
+  
+  .fixed-icons .whatsapp {
+    background-color: #25D366; /* Green color for WhatsApp */
+  }
+  
+  
+  footer{
+      width: 100%;
+      height: 60px;
+      margin-top: 200px;
+      background-color:#191e29;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  footer h3{
+      color: #0096c7;
+      font-size: 0.8em;
+  }
+
+}
+
+/* Mobile Styles */
+@media (max-width: 480px){
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 0em;
+    background-color: #fff;
+}
+:root{
+    --Black: #191e29;
+    --myBlue: #132d46;
+    --theBlue: #023e8a;
+    --beauty: #0096c7;
+    --light-green: #01c38d;
+    --myGrey: #696e79;
+    --white: #fff;
+    --myGrey: rgb(196, 189, 189);
+    --theorange: rgb(199, 180, 76);
+  }
+
+ .backImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    z-index: -8; 
+}
+.backImg img{
+    width: 100%;
+
+}
+.backImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+header{
+     
+  width: 100%;
+  height: 5em;
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  position: fixed; 
+  top: 0;
+  z-index: 100;
+}
+.header.head-active{
+background-color: #132d46;
+height: 5em;
+position: fixed;
+top: 0;
+}
+header.head-active .menu #menu-btn{
+  color: #fff;
+}
+
+header .logo {
+  width: 3em;
+  height: 4em;
+  margin-top: 0.5em;
+  margin-left: 2rem;
+  
+}
+header .logo img{
+
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+}
+
+header .nav{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: beige;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+header .navbar{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 50px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+header #close{
+  display: flex;
+  font-size: 24px;
+  margin-left: 10em;
+  margin-top: 30px;
+  cursor: pointer;
+}
+header .navbar li{
+  display: flex;  
+  list-style: none;
+  border: 1px solid rgb(214, 214, 214) ;
+  width: 99%;
+}
+header .navbar li a{
+  text-decoration: none;
+  color: #132d46;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+}
+header nav ul li a.active {
+  background-color: transparent;
+  color: #01c38d;
+}
+header nav ul li a.active:hover{
+  padding: 5px;
+  border-bottom:  transparent;
+  display: flex;
+}
+
+header nav ul li a:hover {
+  color: #132d46;
+  border-bottom: 0px solid #fff;
+}
+.header.head-active .navbar li a{
+  color: #000;
+}
+.header.head-active nav ul li a.active{
+  color: #01c38d;
+}
+.dropdown{
+  display: flex;
+  gap: 0px;
+  width: 100%;
+}
+
+#about{
+  width: 240px;
+}
+
+#dropdownIcon{
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  margin-top: 5px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.dropdown-content {
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 12em;
+  left: 0px;
+  width: 200px;
+  height: 270px;
+  background-color: beige;
+  color: #fff; 
+  font-weight: 300;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 101;
+  gap: 40px;
+  padding-top: 10px;
+}
+#navdrop {
+  display: none;
+}
+
+#navdrop.show {
+  display: flex;
+} 
+#cl {
+  display: flex; 
+  font-size: 18px;
+  cursor: pointer;
+} 
+.dropdown-content a {
+  color: #696e79;
+  padding: 0;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease; 
+  width: 100%;
+}
+.dropdown-content a.active{
+  color: #01c38d;
+}
+.dropdown-content a:hover {
+  background-color: #fff;
+  color: #696e79;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+header .menu {
+  display: flex; 
+  justify-content: flex-end;
+  width: 80px;
+  height: 30px;
+  margin-left: 10em;
+  margin-top: 25px;
+}
+header .menu #menu-btn {
+  display: flex;
+  cursor: pointer;
+  font-size: 22px;
+  color: #fff;
+}
+.heroTexts{
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #01c38d;
+      font-size: 0.8em;
+      margin-top: 0;
+      text-align: center;
+  }
+  
+  article{
+    height: 100%;
+    margin-top: 50px ;
+}
+article .texts{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+article .texts .story{
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 95%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+article .texts .story h2{
+  font-size: 1.7em;
+  text-align: center;
+}
+article .texts .story p{
+  font-size: 14px;
+}
+article .texts .story .numb, .a{
+  font-size: 0.9em;
+  padding: 10px;
+}
+
+article .texts .beliefs{
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  width: 95%;
+  height: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+article .texts .beliefs ul{
+  padding: 10px;
+}
+
+article .texts .beliefs h2{
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+article .texts .beliefs h6{
+  font-size: 0.7em;
+  width: 70%;
+  opacity: 0.9;
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+.fixed-icons {
+  bottom: 10px; /* Reduce distance from the bottom */
+  right: 10px; /* Reduce distance from the right */
+  gap: 5px; /* Reduce space between icons */
+}
+
+.fixed-icons  .icon {
+  width: 40px; /* Smaller icon size */
+  height: 40px; /* Smaller icon size */
+  font-size: 20px; /* Smaller icon size */
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    margin-top: 50px;
+    background-color:#191e29;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer h3{
+    color: #0096c7;
+    font-size: 0.6em;
+    text-align: center;
+    
+}
+
+
+}

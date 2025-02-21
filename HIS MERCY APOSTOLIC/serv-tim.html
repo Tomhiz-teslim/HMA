@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Time Of Service </title>
+    <link rel="stylesheet" href="./serv-tim.css">
+
+    <link rel="shortcut icon" href="./Assets/IMG-20240812-WA0002.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/e907537899.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto Condensed', sans-serif; /* Use Roboto Condensed font */
+        }
+    </style>
+</head>
+</head>
+<body>
+
+    <header class="header" id="head">
+        <div class="logo">
+            <a href="./index.html"><img src="./Assets/trans.png" alt="Logo"></a>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="nav" id="navBar" >
+            <ul class="navbar">
+                <!-- Close button for mobile view -->
+                <i class="fas fa-times" id="close"></i>
+                <li><a href="./index.html">HOME</a></li>
+                <li><a href="./history.html">ABOUT US</a></li>
+                <li><a href="./ministeries.html" class="B">MINISTRIES</a></li>
+                <li><a href="./media.html" class="B">MEDIA RESOURCES</a></li>
+                <li><a href="./program.html" class="B">PROGRAMS</a></li>
+                <li><a href="./contact.html" class="B">CONTACT US</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Hamburger menu for mobile view -->
+        <div class="menu">
+            <i class="fas fa-bars" id="menu-btn"></i>
+        </div>
+
+    </header>
+    <div class="service-container">
+        <h1>View Time Of Service</h1>
+        <table class="service-table">
+            <thead>
+                <tr>
+                    <th>Service</th>
+                    <th>Day</th>
+                    <th>Time</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="service" data-day="Sunday" data-start="07:00" data-end="09:30">
+                    <td>Sunday Worships</td>
+                    <td>Sunday</td>
+                    <td>7:00 AM - 9:30 AM</td>
+                    <td><span class="status upcoming">Upcoming</span></td>
+                </tr>
+                <tr class="service" data-day="Tuesday" data-start="09:00" data-end="12:00">
+                    <td>Midweek Prayer Program (GOD OF ALL FLESH) <strong>Interdenominational</strong></td>
+                    <td>Tuesday</td>
+                    <td>9:00 AM - 12:00 AM</td>
+                    <td><span class="status upcoming">Upcoming</span></td>
+                </tr>
+                <tr class="service" data-day="Wednesday" data-start="18:00" data-end="19:00">
+                    <td>Midweek Bible Study</td>
+                    <td>Wednesday</td>
+                    <td>6:00 PM - 7:00 PM</td>
+                    <td><span class="status upcoming">Upcoming</span></td>
+                </tr>
+                <tr class="service" data-day="Thursday" data-start="09:00" data-end="10:00">
+                    <td>Pregnant Women/ Waiting Mothers(Prayer Meeting)</td>
+                    <td>Thursday</td>
+                    <td>9:00 AM - 10:00 AM</td>
+                    <td><span class="status upcoming">Upcoming</span></td>
+                </tr>
+                <!-- <tr class="service" data-day="Friday" data-start="18:00" data-end="20:00">
+                    <td>Friday Night Service</td>
+                    <td>Friday</td>
+                    <td>6:00 PM - 8:00 PM</td>
+                    <td><span class="status upcoming">Upcoming</span></td>
+                </tr>-->
+                <!-- <tr class="service" data-day="Saturday" data-start="10:00" data-end="13:00">
+                    <td>Saturday Fellowship</td>
+                    <td>Saturday</td>
+                    <td>10:00 AM - 12:00 PM</td>
+                    <td><span class="status upcoming">Upcoming</span></td>
+                </tr>  -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="fixed-icons">
+        <a href="./email.html" class="icon email" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://wa.me/09013834682" class="icon whatsapp" aria-label="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <footer>
+        <h3>© Copyright HMA 2025. All Right Reserved. Designed and Developed by HMA IT MEDIA DEPARTMENT</h3>
+    </footer>
+
+
+    <script src="./serv-tim.js"></script>
+</body>
+</html>

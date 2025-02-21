@@ -1,0 +1,602 @@
+/* Basic styling for the chat box */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    background-color: #132d46;
+    position: fixed; 
+    top: 0;
+    z-index: 100; 
+}
+
+.header.head-active{
+    background-color: #132d46;
+    height: 120px;
+    position: fixed;
+    top: 0;
+}
+.header.head-active nav ul li a:hover {
+    color: #fff;
+}
+header .logo {
+    width: 80px;
+    height: 100px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+header .logo img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+}
+header .nav{
+    width: 80%;
+    margin-left: 10%;
+}
+
+header .navbar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin: 0;
+    padding: 0;
+}
+header #close{
+    display: none;
+}
+
+header .navbar li{
+    display: flex;  
+    list-style: none;
+}
+header .navbar li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    padding: 7px;
+    border-radius: 10px;
+    width: 100%;
+    font-weight: 600;
+}
+.header.head-active .navbar li a{
+    color: #fff;
+}
+header nav ul li a.active {
+    background-color: #01c38d;
+}
+header nav ul li a.active:hover{
+    padding: 7px;
+    border-bottom: 2px solid transparent;
+}
+header .menu, #menu-btn {
+    display: none; 
+}
+
+header nav ul li a:hover {
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+
+header .menu{
+    display: none;
+}
+
+.chat-box {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 0px;
+    width: 600px;
+    height: 500px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+form{
+    width: 90%;
+    height: 100;
+}
+
+.chat-box h2 {
+    margin-top: 0;
+}
+
+.chat-box label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.chat-box input, .chat-box textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+}
+
+.chat-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.chat-box button:hover {
+    background-color: #45a049;
+}
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        padding-top: 0em;
+        background-color: #fff;
+    }
+    :root{
+        --Black: #191e29;
+        --myBlue: #132d46;
+        --theBlue: #023e8a;
+        --beauty: #0096c7;
+        --light-green: #01c38d;
+        --myGrey: #696e79;
+        --white: #fff;
+        --myGrey: rgb(196, 189, 189);
+        --theorange: rgb(199, 180, 76);
+      }
+    
+      .video-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70vh;
+        overflow: hidden;
+        z-index: -8; 
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+     .video-container img{
+        width: 100%;
+    
+    }
+     .video-container img #bg-video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+    }
+   header{
+        width: 100%;
+        height: 120px;
+        display: flex;
+        flex-direction: row;
+        background-color: #132d46;
+        position: fixed; 
+        top: 0;
+        z-index: 100;
+   }
+   .header.head-active{
+    background-color: #132d46;
+    height: 5.9em;
+    position: fixed;
+    top: 0;
+    }
+    header.head-active .menu #menu-btn{
+        color: #fff;
+    }
+
+    header .logo {
+        width: 4em;
+        height: 5em;
+        margin-top: 0.5em;
+        margin-left: 2rem;
+        
+    }
+    header .logo img{
+    
+        width: 100%;
+        height: 100%;
+        border-radius: 2px;
+    }
+
+    header .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: beige;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    header .navbar{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    header #close{
+        display: flex;
+        font-size: 24px;
+        margin-left: 22em;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    header .navbar li{
+        display: flex;  
+        list-style: none;
+        border: 1px solid rgb(214, 214, 214) ;
+        width: 99%;
+    }
+    header .navbar li a{
+        text-decoration: none;
+        color: #132d46;
+        font-weight: 400;
+        padding: 5px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    header nav ul li a.active {
+        background-color: transparent;
+        color: #01c38d;
+    }
+    header nav ul li a.active:hover{
+        padding: 5px;
+        border-bottom:  transparent;
+        display: flex;
+    }
+
+    header nav ul li a:hover {
+        color: #132d46;
+        border-bottom: 0px solid #fff;
+    }
+    .dropdown{
+        display: flex;
+        gap: 0px;
+        width: 100%;
+    }
+
+    #about{
+        width: 240px;
+    }
+
+    #dropdownIcon{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        margin-top: 5px;
+        cursor: pointer;
+        width: 100px;
+    }
+    
+    .dropdown-content {
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 12em;
+        left: 0px;
+        width: 200px;
+        height: 270px;
+        background-color: beige;
+        color: #fff; 
+        font-weight: 300;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 101;
+        gap: 40px;
+        padding-top: 10px;
+    }
+    #navdrop {
+        display: none;
+    }
+
+    #navdrop.show {
+        display: flex;
+    } 
+    #cl {
+        display: flex; 
+        font-size: 18px;
+        cursor: pointer;
+    } 
+    .dropdown-content a {
+        color: #696e79;
+        padding: 0;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        transition: background-color 0.3s ease, color 0.3s ease; 
+        width: 100%;
+    }
+    .dropdown-content a.active{
+        color: #01c38d;
+    }
+    .dropdown-content a:hover {
+        background-color: #fff;
+        color: #696e79;
+    }
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    header .menu {
+        display: flex; 
+        justify-content: flex-end;
+        width: 80px;
+        height: 30px;
+        margin-left: 29em;
+        margin-top: 30px;
+    }
+    header .menu #menu-btn {
+        display: flex;
+        cursor: pointer;
+        font-size: 24px;
+        color: #fff;
+    }
+}
+@media(max-width: 480px){
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    header{
+        width: 100%;
+        height: 5em;
+        display: flex;
+        flex-direction: row;
+        background-color: #132d46;
+        position: fixed; 
+        top: 0;
+        z-index: 100;
+   }
+
+    header.head-active .menu #menu-btn{
+        color: #000;
+    }
+    .header.head-active .menu h4{
+        color: #000;
+    }
+    header .logo {
+        width: 3em;
+        height: 4em;
+        margin-top: 0.5em;
+        margin-left: 2rem;
+        
+    }
+    header .logo img{
+    
+        width: 100%;
+        height: 100%;
+        border-radius: 2px;
+    }
+
+    header .nav{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        background-color: beige;
+        margin: 0;
+        padding: 0;
+        display: none;
+    }
+    header .navbar{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 50px;
+        margin: 0;
+        padding: 0;
+        background-color: transparent;
+    }
+    header #close{
+        display: flex;
+        font-size: 24px;
+        margin-left: 10em;
+        margin-top: 30px;
+        cursor: pointer;
+    }
+    header .navbar li{
+        display: flex;  
+        list-style: none;
+        border: 1px solid rgb(214, 214, 214) ;
+        width: 99%;
+    }
+    header .navbar li a{
+        text-decoration: none;
+        color: #132d46;
+        font-weight: 400;
+        padding: 5px;
+        border-radius: 10px;
+        width: 100%;
+    }
+    header nav ul li a.active {
+        background-color: transparent;
+        color: #01c38d;
+    }
+    header nav ul li a.active:hover{
+        padding: 5px;
+        border-bottom:  transparent;
+        display: flex;
+    }
+
+    header nav ul li a:hover {
+        color: #132d46;
+        border-bottom: 0px solid #fff;
+    }
+    .dropdown{
+        display: flex;
+        gap: 0px;
+        width: 100%;
+    }
+
+    #about{
+        width: 240px;
+    }
+
+    #dropdownIcon{
+        display: flex;
+        justify-content: center;
+        font-size: 18px;
+        margin-top: 5px;
+        cursor: pointer;
+        width: 100px;
+    }
+    
+    .dropdown-content {
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        top: 12em;
+        left: 0px;
+        width: 200px;
+        height: 270px;
+        background-color: beige;
+        color: #fff; 
+        font-weight: 300;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 101;
+        gap: 40px;
+        padding-top: 10px;
+    }
+    #navdrop {
+        display: none;
+    }
+
+    #navdrop.show {
+        display: flex;
+    } 
+    #cl {
+        display: flex; 
+        border: dashed;
+        font-size: 18px;
+        cursor: pointer;
+    } 
+    .dropdown-content a {
+        color: #696e79;
+        padding: 0;
+        text-decoration: none;
+        display: block;
+        font-size: 15px;
+        transition: background-color 0.3s ease, color 0.3s ease; 
+        width: 100%;
+    }
+    .dropdown-content a.active{
+        color: #01c38d;
+    }
+    .dropdown-content a:hover {
+        background-color: #fff;
+        color: #696e79;
+    }
+    .dropdown:hover .dropdown-content {
+        display: flex;
+    }
+
+    header .menu {
+        display: flex; 
+        justify-content: flex-end;
+        width: 80px;
+        height: 30px;
+        margin-left: 10em;
+        margin-top: 25px;
+    }
+    header .menu #menu-btn {
+        display: flex;
+        cursor: pointer;
+        font-size: 22px;
+        color: #fff;
+    }
+    .chat-box {
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        padding: 0px;
+        width: 300px;
+        height: 300px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+    }
+    form{
+        width: 90%;
+        height: 100;
+    }
+    
+    .chat-box h2 {
+        margin-top: 0;
+    }
+    
+    .chat-box label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .chat-box input, .chat-box textarea {
+        width: 95%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+    }
+    
+    .chat-box button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    .chat-box button:hover {
+        background-color: #45a049;
+    }
+}
